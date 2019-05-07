@@ -37,6 +37,10 @@ export const getLocation = () => new Promise((resolve) => {
   })
 })
 
+export const openLocation = (obj) => {
+  wx.openLocation(obj)
+}
+
 export const chooseLocation = () => new Promise((resolve, reject) => {
   wx.chooseLocation({
     success (res) {
@@ -187,6 +191,7 @@ export default {
   getStorage,
   setStorage,
   getLocation,
+  openLocation,
   chooseLocation,
   removeStorage,
   clearStorage,
